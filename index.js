@@ -1,46 +1,38 @@
-//  1.So pomos na "if", "else if" i "else napravete soodvetna proverka za temperaturata koja sto ke ja stavite vie prvicno vo edna varijabla. 
-// Print "It's freezing!" if the temperature is below 0.
-// Print "It's cold." if the temperature is between 0 and 15.
-// Print "It's warm." if the temperature is between 16 and 25.
-// Print "It's hot!" if the temperature is above 25.
+let mojBroj = 5;
+let stringName = "My name is Marija";
+let object = {
+    fullname: "Marija Trajkovska", 
+    birth: "1996"
+} 
+let niza = ["Kate", "Kristina", 2008]
+let boolean = true
+let nesto = undefined;
+let nestoDrugo = null;
+let golemBroj = 584654n;
 
-let temperature = 13; 
+console.log(stringName)
+let firstName = "Marija ";
+console.log(firstName)
+let lastName = "Trajkovska";
+console.log(firstName += "Trajkovska");
+console.log (firstName)
+console.log(typeof stringName)
+console.log(typeof mojBroj)
+console.log(typeof object)
+console.log(typeof niza)
+console.log(typeof niza)
+console.log(typeof nesto)
+console.log(typeof nestoDrugo)
 
-if (temperature < 0){
-    console.log ("It's freezing");
-} else if (temperature > 0 && temperature < 15) {
-    console.log ("It's cold");
-} else if (temperature > 16 && temperature < 25) {
-    console.log ("It's warm");
-} else {
-    console.log ("It's hot!");
-}
 
+{ // Scope A
+    let broj = 1; { //Scope B
+        let brojche = 2; { // Scope C
+            let broevi = 20;
+            result = broj + brojche + broevi;
+        } // Scope C
 
-// 2. Proverka za vozrast: 
-// 0-2 years: "Infant"
-// 3-12 years: "Child"
-// 13-19 years: "Teenager"
-// 20-59 years: "Adult"
-// 60 years and above: "Senior"
+        console.log(result);
+    } // Scope B
 
-let age = 15; 
-
-if (age >=0 && age < 2){
-    console.log ("Infant");
-} else if (age > 3 && age < 12){
-    console.log ("Child");
-} else if (age > 12 && age < 19){
-    console.log ("Teenager");
-} else if (age > 19 && age < 59){
-    console.log ("Adult");
-} else {
-    console.log ("Senior");
-}
-
-// 3. So pomos na ternary operator proverete dali eden broj e paren ili neparen.
-
-let dva = 3; 
-
-let proverka = (dva % 2 !== 0) ? "Brojot e neparen" : "Brojot e paren";
-console.log(proverka);
+} // Scope A 
